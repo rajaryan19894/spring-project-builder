@@ -1,0 +1,50 @@
+server:
+  port: 8081
+
+project:
+  path: "/Users/raj.aryan/Work/codebase/personal/"
+  name: "expy"
+  source-root: "/src/main/java"
+  base-package: "com.googne.expy"
+
+packages:
+  model: "model"
+  dto: "dto"
+  mapper: "mapper"
+  validator: "validator"
+  repository: "repository"
+  service: "service"
+  service-impl: "service.impl"
+  controller: "controller"
+
+naming:
+  suffix:
+    dto-request: "Request"
+    dto-response: "Response"
+    mapper: "Mapper"
+    validator: "Validator"
+    repository: "Repository"
+    service: "Service"
+    service-impl: "ServiceImpl"
+    controller: "Controller"
+
+rest:
+  base-path-include: false
+  base-path: "/api"
+  pluralize-endpoints: false
+
+persistence:
+  id-type: "String"
+  repository-type: "JpaRepository"
+
+generator:
+  input:
+    model-class: "Apple"
+    generate:
+      dto: true
+      mapper: true
+      validator: true
+      repository: false
+      service: true
+      service-impl: false # not in scope of this project
+      controller: true
